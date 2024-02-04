@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>EXERCISE ONE </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <center>
+        <div><b>ABC Academy</b>&#128640;</div>
+        <h1>Traning | Tech news| Freshers Guide</h1>
+        <h2>Empowering young developers to level up thier skills through through traning in software development technologies</h2>
+        <img src="https://i.ytimg.com/vi/wRNinF7YQqQ/sddefault.jpg" alt="">
+    </center>
+        <section>
+            <p>In this video , i will explain what full stack development is and provide a detailed overview of the technologies used to build full stack web applications .Full stack web development involves building the front-end ,back-end, and database components of a web application.This means that full stack developers are responsible for everything from designing the user interface to server side logic  and database.<br>i will begin by discussing  the 
+      key technologies and programming languages used in full stack  web developmnet including HTML,CSS, JAVASCRIPT and frontend frameworks like React and Angular.I will then move on to the server side technologies like python , java and Nodejs and databases like MySQL,MongoDB and AWS.</p>  
+            <h3>Lets divide FullStack into 3 parts</h3>
+            <ul>
+                <li>Front-end</li>
+                <li>Back-end</li>
+                <li>DataBase</li>
+            </ul>
+        </section>
+        <h2>Technologies used for front-end development</h2>
+        <style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th>Front-End</th>
+    <th>Back-End </th>
+    <th>Database</th>
+  </tr>
+  <tr>
+    <td>HTML</td>
+    <td>JAVA</td>
+    <td>Mongo DB</td>
+  </tr>
+  <tr>
+    <td>CSS</td>
+    <td>PYTHON </td>
+    <td>MySQL</td>
+  </tr>
+  <tr>
+    <td>JavaScript</td>
+    <td>Node.js </td>
+    <td>Aws</td>
+  </tr>
+</table>
+<hr>
+
+    <p>register for a course|Instagram|<a href="https://www.youtube.com/watch?v=wRNinF7YQqQ">Youtube</a></p>
+    <div><b>ABC Academy</b>&#128640;</div>
+    <p>Traning | Tech news| Freshers Guide</p>
+    <h2>Empowering young developers to level up thier skills through through traning in software development technologies</h2>
+    <hr>
+    <h1><br>REGISTRATION FORM</br></h1>
+    <form>
+
+<label> Name: </label>       
+<input type="text" name="firstname" size="15"/> <br> <br>
+<label> Age: </label>   
+<input type="Number" name="Age"/> <br> <br>
+<label> 
+Gender :
+</label><br>
+<input type="radio" name="Male"/> Male 
+<input type="radio" name="Female"/> Female 
+<input type="radio" name="Other"/> Other
+<br>
+<br>
+<label> Email: </label>       
+<input type="text" name="E-mail" size="15"/> <br> <br>
+<label> 
+Course :
+</label> 
+<select>
+<option value="Course">Course</option>
+<option value="full stack development">full stack development</option>
+<option value="HTML">HTML</option>
+<option value="CSS">CSS</option>
+<option value="JAVASCRIPT">Java script</option>
+<option value="MySQL">MyAQL</option>
+<option value="Mango DB">Mongo DB</option>
+</select>
+<br>
+<br>
+<label> 
+Upload your Resume :
+</label>
+<select>
+<input type="file"/>
+</select>
+ <input type="button" value="Submit" />
+ <input type="button" value="Reset" />
+ <hr>
+ <p>Home|Instagram|<a href="https://www.youtube.com/watch?v=wRNinF7YQqQ">Youtube</a></p>
+ <hr>
+ </body>
+ </html>
+
+
