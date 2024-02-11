@@ -8,7 +8,6 @@ body {
     background-size: 100%;
 }
 header {
-    /* background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8gRTlbDcc4-NMsFwm_bi6rKQBDXhkEMvEE56LT-WWN_yWZ8m8"); */
     color: #eee6e6;
     padding: 20px;
     width: 100%;
@@ -48,7 +47,6 @@ section {
 }
 
 footer {
-    /* background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8gRTlbDcc4-NMsFwm_bi6rKQBDXhkEMvEE56LT-WWN_yWZ8m8"); */
     color: #f9f3f3;
     text-align: center;
     padding: 20px;
