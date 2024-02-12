@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8gRTlbDcc4-NMsFwm_bi6rKQBDXhkEMvEE56LT-WWN_yWZ8m8");
-    background-color: rgb(36, 90, 133);
+    background-color: rgb(72, 170, 245);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -39,7 +39,7 @@ section {
 }
 
 .lab-card {
-    background-color: #49b3d0;
+    background-color: #f0f5f6;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
