@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8gRTlbDcc4-NMsFwm_bi6rKQBDXhkEMvEE56LT-WWN_yWZ8m8");
-    background-color: rgb(72, 170, 245);
+    background-color: rgb(223, 228, 231);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -47,7 +47,7 @@ section {
 }
 
 footer {
-    color: #f9f3f3;
+    color: #131313;
     text-align: center;
     padding: 20px;
     background-size: 100%;
@@ -55,6 +55,6 @@ footer {
 }
     table,th,td{
         border:2px solid rgb(15, 15, 16) ;
-        color: rgb(80, 80, 169);
+        color: rgb(53, 53, 57);
         width:100%
     }
