@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Solutions</title>
+    <script>
+        // JavaScript functions go here
+        function printCombinations(str) {
+            let result = [];
+
+            function generateCombinations(prefix, remaining) {
+                if (remaining.length === 0) {
+                    result.push(prefix);
+                } else {
+                    for (let i = 0; i < remaining.length; i++) {
+                        generateCombinations(prefix + remaining[i], remaining.slice(0, i) + remaining.slice(i + 1));
+                    }
+                }
+            }
+
+            generateCombinations('', str);
+            return result;
+        }
+
+        function findDuplicates(arr) {
+            let duplicates = [];
+            let seen = {};
+
+            arr.forEach(function(item) {
+                if (seen[item]) {
+                    if (!duplicates.includes(item)) {
+                        duplicates.push(item);
+                    }
+                } else {
+                    seen[item] = true;
+                }
+            });
+
+            return duplicates;
+        }
+
+        function addComplexNumbers(num1, num2) {
+            return { real: num1.real + num2.real, imaginary: num1.imaginary + num2.imaginary };
+        }
+
+        function changeBackgroundColor() {
+            let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16); // Generate random hexadecimal color
+            document.body.style.backgroundColor = randomColor; // Set background color of body
+        }
+
+        function countOccurrences() {
+            let text = document.getElementById('text').value;
+            let searchChar = document.getElementById('searchChar').value;
+            let count = (text.match(new RegExp(searchChar, 'g')) || []).length;
+            alert("Occurrences of '" + searchChar + "': " + count);
+        }
+    </script>
+</head>
+<body>
+    <!-- HTML elements go here -->
+    <h2>JavaScript Solutions</h2>
+
+    <!-- Example usage of functions -->
+    <h3>Example Usage:</h3>
+    <p>Print combinations of 'abc': <script>document.write(printCombinations('abc').join(', '));</script></p>
+    <p>Find duplicates in array [1, 2, 3, 4, 2, 5, 6, 3, 7, 7]: <script>document.write(findDuplicates([1, 2, 3, 4, 2, 5, 6, 3, 7, 7]));</script></p>
+    <p>Add two complex numbers (3 + 2i) and (1 + 4i): <script>document.write(JSON.stringify(addComplexNumbers({real: 3, imaginary: 2}, {real: 1, imaginary: 4})));</script></p>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <!-- Form for counting occurrences of a character -->
+    <h3>Count Occurrences of Character</h3>
+    <form>
+        <textarea id="text" rows="4" cols="50"></textarea><br>
+        <label for="searchChar">Search Character:</label>
+        <input type="text" id="searchChar">
+        <button type="button" onclick="countOccurrences()">Search</button>
+    </form>
+</body>
+</html>
