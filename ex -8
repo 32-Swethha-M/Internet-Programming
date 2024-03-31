@@ -1,0 +1,90 @@
+<%@ page import="java.sql.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<%
+    // Declare variables
+    int totalEmployees = 0;
+    double averageSalary = 0;
+    double highestSalary = 0;
+
+    // Connection parameters
+    String url = "jdbc:mysql://localhost:3306/swethha";
+    String username = "swethha";
+    String password = "123";
+
+    try {
+        // Establish database connection
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employees", "swethha", "123");
+
+        // Retrieve total number of employees
+        Statement stmtTotal = connection.createStatement();
+        ResultSet rsTotal = stmtTotal.executeQuery("SELECT COUNT(*) FROM employees");
+        if (rsTotal.next()) {
+            totalEmployees = rsTotal.getInt(1);
+        }
+        rsTotal.close();
+        stmtTotal.close();
+
+        // Retrieve average salary
+        Statement stmtAvg = connection.createStatement();
+        ResultSet rsAvg = stmtAvg.executeQuery("SELECT AVG(salary) FROM employees");
+        if (rsAvg.next()) {
+            averageSalary = rsAvg.getDouble(1);
+        }
+        rsAvg.close();
+        stmtAvg.close();
+
+        // Retrieve highest salary
+        Statement stmtMax = connection.createStatement();
+        ResultSet rsMax = stmtMax.executeQuery("SELECT MAX(salary) FROM employees");
+        if (rsMax.next()) {
+            highestSalary = rsMax.getDouble(1);
+        }
+        rsMax.close();
+        stmtMax.close();
+
+        // Close database connection
+        connection.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+%>
+
+<h2>Employee Information</h2>
+<table>
+    <tr>
+        <th>Total Employees</th>
+        <td><%= totalEmployees %></td>
+    </tr>
+    <tr>
+        <th>Average Salary</th>
+        <td>$ <%= averageSalary %></td>
+    </tr>
+    <tr>
+        <th>Highest Salary</th>
+        <td>$ <%= highestSalary %></td>
+    </tr>
+</table>
+
+</body>
+</html>
