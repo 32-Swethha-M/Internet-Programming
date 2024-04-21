@@ -1,0 +1,95 @@
+<?php
+// Function to check if it's a leap year
+function isLeapYear($year) {
+    if ((($year % 4 == 0) && ($year % 100 != 0)) || ($year % 400 == 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Function to print Floyd's Triangle
+function floydsTriangle($n) {
+    $number = 1;
+    for ($row = 1; $row <= $n; $row++) {
+        for ($col = 1; $col <= $row; $col++) {
+            echo $number . " ";
+            $number++;
+        }
+        echo "<br>";
+    }
+}
+
+// Class representing an employee
+class Employee {
+    // Properties
+    public $name;
+    public $age;
+    public $salary;
+    public $department;
+
+    // Constructor
+    public function __construct($name, $age, $salary, $department) {
+        $this->name = $name;
+        $this->age = $age;
+        $this->salary = $salary;
+        $this->department = $department;
+    }
+
+    // Methods for setting properties
+    public function setName($name) {
+        $this->name = $name;
+    }
+
+    public function setAge($age) {
+        $this->age = $age;
+    }
+
+    public function setSalary($salary) {
+        $this->salary = $salary;
+    }
+
+    public function setDepartment($department) {
+        $this->department = $department;
+    }
+
+    // Methods for getting properties
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getAge() {
+        return $this->age;
+    }
+
+    public function getSalary() {
+        return $this->salary;
+    }
+
+    public function getDepartment() {
+        return $this->department;
+    }
+}
+
+// Example usage
+
+// 1. Leap year checker
+$year = 2024; // Change this to any year
+if (isLeapYear($year)) {
+    echo "$year is a leap year.<br>";
+} else {
+    echo "$year is not a leap year.<br>";
+}
+
+// 2. Floyd's Triangle
+$n = 5; // Change this to desired number of rows
+floydsTriangle($n);
+echo "<br>";
+
+// 3. Employee details
+$employee = new Employee("John Doe", 30, 50000, "IT");
+echo "Employee Name: " . $employee->getName() . "<br>";
+echo "Employee Age: " . $employee->getAge() . "<br>";
+echo "Employee Salary: $" . $employee->getSalary() . "<br>";
+echo "Employee Department: " . $employee->getDepartment() . "<br>";
+?>
